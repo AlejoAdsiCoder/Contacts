@@ -28,21 +28,39 @@ export default function List() {
         setFilterTel(e.target.value);
     }
 
+
+    const filteredNames = (items) => items.filter(e => e.nombre.toLowerCase().includes(filterName));
+        // setSearchResults(filteredNames);
+
+        const filteredEmails = (items) => items.filter(e => e.email.toLowerCase().includes(filterEmail));
+        // setSearchResults(filteredEmails);
+
+        const filteredTel = (items) => items.filter(e => e.telefono.toLowerCase().includes(filterTel));
+        // setSearchResults(filteredTel);
     
 
     useEffect(() => {
         getContacts();
 
-        const filteredNames = items.filter(e => e.nombre.toLowerCase().includes(filterName));
-        setSearchResults(filteredNames);
+        let result = items;
+            result = filteredNames(result);
+            result = filteredEmails(result);
+            result = filteredTel(result);
 
-        const filteredEmails = items.filter(e => e.email.toLowerCase().includes(filterEmail));
-        setSearchResults(filteredEmails);
+            setSearchResults(result)
 
-        const filteredTel = items.filter(e => e.telefono.toLowerCase().includes(filterTel));
-        setSearchResults(filteredTel);
+        // const filteredNames = items.filter(e => e.nombre.toLowerCase().includes(filterName));
+        // setSearchResults(filteredNames);
 
-    }, [filterName, filterEmail, filterTel, items]);
+        // const filteredEmails = items.filter(e => e.email.toLowerCase().includes(filterEmail));
+        // setSearchResults(filteredEmails);
+
+        // const filteredTel = items.filter(e => e.telefono.toLowerCase().includes(filterTel));
+        // setSearchResults(filteredTel);
+
+
+
+    }, [filterName, filterTel, filterEmail, items]);
 
     const getContacts = async () =>{
         fetch (
