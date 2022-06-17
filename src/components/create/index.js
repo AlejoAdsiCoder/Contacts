@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Button, Form } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 export const Create = () => {
     const [nombre, setNombre] = useState("");
@@ -7,6 +8,8 @@ export const Create = () => {
     const [fecha, setFecha] = useState("");
     const [direccion, setDireccion] = useState("");
     const [email, setEmail] = useState("");
+
+    const navigate = useNavigate();
 
     function handleSubmit(event) {
         event.preventDefault();
@@ -19,12 +22,15 @@ export const Create = () => {
             body: JSON.stringify(contact)
         })
 
+        navigate('/');
+
         // setModalShow(false);
     }
   return (
     <div>
+        <h3>Agregar Contacto</h3>
 
-        <Form onSubmit={handleSubmit}>
+        <Form style={{textAlign: 'left'}} onSubmit={handleSubmit}>
 
         <Form.Group size="lg">
 

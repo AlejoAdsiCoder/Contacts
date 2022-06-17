@@ -6,7 +6,7 @@ import Container from 'react-bootstrap/Container';
 export const Menu = () => {
   return (
     <div>
-        <Navbar bg="light" expand="lg">
+        <Navbar bg="primary" style={{marginBottom: '14px'}} variant="dark">
           <Container>
             <Navbar.Brand href="#home">BRM Contacts</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />

@@ -136,14 +136,14 @@ export default function List() {
                         <>
                             <td>{item.nombre}</td>
                             <td>{item.telefono}</td>
-                            <td>{item.fecha_nacimiento}</td>
+                            <td>{item.fecha}</td>
                             <td>{item.direccion}</td>
                             <td>{item.email}</td>
                             <td>
-                                <Link to={{ pathname: `/edit/${item.id}`}}>
-                                    <Button variant="danger">Editar</Button>
+                                <Link style={{margin: '4px'}} to={{ pathname: `/edit/${item.id}`}}>
+                                    <Button variant="secondary">Editar</Button>
                                 </Link>
-                                <Button variant="secondary" onClick={() => deleteData(item.id)}>Eliminar</Button>
+                                <Button style={{margin: '4px'}} variant="danger" onClick={() => deleteData(item.id)}>Eliminar</Button>
                             </td>
                         </>
                     </tr>

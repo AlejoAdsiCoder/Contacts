@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Button, Form } from 'react-bootstrap';
-import { useHistory, useParams } from 'react-router-dom';
+import { useHistory, useNavigate, useParams } from 'react-router-dom';
 
 const initialValue = {
     nombre: "",
@@ -18,6 +18,8 @@ export const Edit = () => {
     const { nombre, telefono, fecha, direccion, email } = user;
 
     const { id } = useParams();
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetch (
@@ -49,11 +51,14 @@ export const Edit = () => {
             })
             .then(response => response.json())
             .then(data => setUser(data));
+        
+            navigate('/');
     }
 
   return (
     <div>
-        <Form onSubmit={updateContact}>
+        <h3>Editar Contacto</h3>
+        <Form style={{textAlign: 'left'}} onSubmit={updateContact}>
 
         <Form.Group size="lg">
 
@@ -119,7 +124,7 @@ export const Edit = () => {
 
         <Button type="submit">
 
-        Crear
+        Editar
 
         </Button>
 
