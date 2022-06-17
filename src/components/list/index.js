@@ -29,13 +29,13 @@ export default function List() {
     }
 
 
-    const filteredNames = (items) => items.filter(e => e.nombre.toLowerCase().includes(filterName));
+    const filteredNames = (items) => items.filter(e => e.nombre.toLowerCase().includes(filterName.toLowerCase()));
         // setSearchResults(filteredNames);
 
-        const filteredEmails = (items) => items.filter(e => e.email.toLowerCase().includes(filterEmail));
+        const filteredEmails = (items) => items.filter(e => e.email.toLowerCase().includes(filterEmail.toLowerCase()));
         // setSearchResults(filteredEmails);
 
-        const filteredTel = (items) => items.filter(e => e.telefono.toLowerCase().includes(filterTel));
+        const filteredTel = (items) => items.filter(e => e.telefono.toLowerCase().includes(filterTel.toLowerCase()));
         // setSearchResults(filteredTel);
     
 
@@ -87,6 +87,7 @@ export default function List() {
                 <h2>Contactos</h2>
                     
             </section>
+            <Form.Label htmlFor="basic-url" size="sm">Buscar por:</Form.Label>
             <InputGroup size="sm" className="mb-3">
                 <InputGroup.Text id="inputGroup-sizing-sm">Nombre</InputGroup.Text>
                     <Form.Control
