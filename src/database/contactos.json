@@ -1,0 +1,45 @@
+{
+  "contactos": [
+    {
+      "id": 1,
+      "nombre": "Alex",
+      "telefono": "333444222",
+      "fecha_nacimiento": "15/10/1993",
+      "direccion": "cl 23 45",
+      "email": "leho@gmail.com"
+    },
+    {
+      "nombre": "cathe",
+      "telefono": "231",
+      "fecha_nacimiento": "15/10/1997",
+      "direccion": "cl 23 11",
+      "email": "leho@gmail.com",
+      "id": 3,
+      "fecha": "2022-06-10"
+    },
+    {
+      "nombre": "Alejandro",
+      "telefono": "3452455",
+      "fecha": "2022-06-17",
+      "direccion": "cl 34# 2",
+      "email": "leh@mail.c",
+      "id": 4
+    },
+    {
+      "nombre": "Carlos",
+      "telefono": "5562",
+      "fecha": "2022-06-21",
+      "direccion": "CL 46A #20 55",
+      "email": "cl@mail.co",
+      "id": 5
+    },
+    {
+      "nombre": "Carlos",
+      "telefono": "5562",
+      "fecha": "2022-06-21",
+      "direccion": "CL 46A #20 55",
+      "email": "cl@mail.co",
+      "id": 6
+    }
+  ]
+}
