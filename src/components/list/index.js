@@ -38,9 +38,38 @@ export default function List() {
         const filteredTel = (items) => items.filter(e => e.telefono.toLowerCase().includes(filterTel.toLowerCase()));
         // setSearchResults(filteredTel);
     
+    const getEdad = (fecha) => {
+        const currentDate = new Date();
+        
+        let CurrentYear = parseInt(currentDate.getFullYear());
+        let CurrentMonth = parseInt(currentDate.getMonth());
+        let CurrentDay = parseInt(currentDate.getDate());
+
+        let birthDate = new Date(fecha);
+        let birthYear = parseInt(birthDate.getFullYear());
+        let birthMonth = parseInt(birthDate.getMonth());
+        let birthDay = parseInt(birthDate.getDate());
+
+
+        let age = CurrentYear - birthYear;
+        if(CurrentMonth < birthMonth) {
+            age--;
+        } else if (CurrentMonth === birthMonth) {
+            if(CurrentDay < birthDay) {
+                age--;
+            } 
+        }
+        // if(m < 0 || (m === 0 && parseInt(currentDate.getDate()) < parseInt(birthDate.getDate()))) {
+        //     age --;
+        // }
+
+        return age;
+    }
 
     useEffect(() => {
         getContacts();
+
+        getEdad();
 
         let result = items;
             result = filteredNames(result);
@@ -61,6 +90,8 @@ export default function List() {
 
 
     }, [filterName, filterTel, filterEmail, items]);
+
+    
 
     const getContacts = async () =>{
         fetch (
@@ -118,13 +149,14 @@ export default function List() {
                     onChange={getFiltersEmail}
                     />
             </InputGroup>
-        <Table striped>
+        <Table striped responsive>
             
             <thead>
             <tr>
                 <th>Nombre</th>
                 <th>Teléfono</th>
                 <th>Fecha de nacimiento</th>
+                <th>Edad</th>
                 <th>Dirección</th>
                 <th>Correo electrónico</th>
                 
@@ -138,6 +170,7 @@ export default function List() {
                             <td>{item.nombre}</td>
                             <td>{item.telefono}</td>
                             <td>{item.fecha}</td>
+                            <td>{getEdad(item.fecha)}</td>
                             <td>{item.direccion}</td>
                             <td>{item.email}</td>
                             <td>

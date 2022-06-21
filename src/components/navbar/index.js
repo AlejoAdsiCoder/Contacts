@@ -6,10 +6,10 @@ import Container from 'react-bootstrap/Container';
 export const Menu = () => {
   return (
     <div>
-        <Navbar bg="primary" style={{marginBottom: '14px'}} variant="dark">
+        <Navbar collapseOnSelect expand="sm" bg="primary" style={{marginBottom: '14px'}} variant="dark">
           <Container>
+             <Navbar.Toggle aria-controls='navbarScroll' data-bs-target="#navabarScroll" id="navbarScroll" />
             <Navbar.Brand href="#home">BRM Contacts</Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
                 <Nav.Link href="/">Home</Nav.Link>
@@ -18,6 +18,7 @@ export const Menu = () => {
               </Nav>
             </Navbar.Collapse>
           </Container>
+
         </Navbar>
     </div>
   )

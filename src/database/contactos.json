@@ -4,14 +4,14 @@
       "id": 1,
       "nombre": "Alex",
       "telefono": "333444222",
-      "fecha": "2022-06-29",
+      "fecha": "1993-10-15",
       "direccion": "cl 23 45",
       "email": "leho@gmail.com"
     },
     {
       "nombre": "cathe",
       "telefono": "231",
-      "fecha": "15/10/1997",
+      "fecha": "1997-10-20",
       "direccion": "cl 23 11",
       "email": "leho@gmail.com",
       "id": 3
@@ -19,7 +19,7 @@
     {
       "nombre": "Alejandro",
       "telefono": "3902312",
-      "fecha": "2022-06-22",
+      "fecha": "1998-06-22",
       "direccion": "cl 34# 2",
       "email": "apatino@mail.c",
       "id": 4
@@ -27,7 +27,7 @@
     {
       "nombre": "Carlos",
       "telefono": "5562",
-      "fecha": "2022-06-21",
+      "fecha": "2010-06-08",
       "direccion": "CL 46A #20 55",
       "email": "cl@mail.co",
       "id": 5
@@ -35,7 +35,7 @@
     {
       "nombre": "diego torres",
       "telefono": "8888",
-      "fecha": "2022-06-21",
+      "fecha": "2007-10-21",
       "direccion": "cl 23 12",
       "email": "dt@mail.co",
       "id": 7
@@ -43,7 +43,7 @@
     {
       "nombre": "Oswaldo",
       "telefono": "1111",
-      "fecha": "2022-06-21",
+      "fecha": "2010-06-15",
       "direccion": "cl 90 3",
       "email": "me@mail.co",
       "id": 8

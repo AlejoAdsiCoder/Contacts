@@ -60,7 +60,7 @@ export const Edit = () => {
         <h3>Editar Contacto</h3>
         <Form style={{textAlign: 'left'}} onSubmit={updateContact}>
 
-        <Form.Group size="lg">
+        <Form.Group size="lg sm">
 
         <Form.Label>Nombre</Form.Label>
 
